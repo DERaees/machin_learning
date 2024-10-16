@@ -25,3 +25,28 @@ def main():
     )
 
     st.title("Streamlit App with Custom Theme")
+
+if __name__ == "__main__":
+    # main()
+    time.sleep(2)
+    sidebar()
+
+    # Add inline CSS to style the sidebar and main content area
+    st.markdown(
+        """
+        <style>
+        .sidebar {
+            background-color: yellow;
+            padding: 10px;
+        }
+        .css-1gkm2gq {
+            background-color: yellow !important;
+        }
+        .main {
+            background-color: purple;
+            padding: 20px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
